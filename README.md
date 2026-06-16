@@ -43,16 +43,22 @@ Output = 1010
 
 ### 3. 4-Bit Up Counter
 
-A synchronous modulo-16 counter, incrementing every clock cycle with automatic rollover.
+A synchronous modulo-16 counter, incrementing every clock cycle with automatic rollover after 15.
 
 ```mermaid
 stateDiagram-v2
-    s0000 --> s0001
-    s0001 --> s0010
-    s0010 --> s0011
-    s0011 --> dots1[...]
-    dots1 --> s1111
-    s1111 --> s0000: rollover
+    direction LR
+    s0: 0000
+    s1: 0001
+    s2: 0010
+    s3: 0011
+    s15: 1111
+    [*] --> s0
+    s0 --> s1
+    s1 --> s2
+    s2 --> s3
+    s3 --> s15: ...counting up...
+    s15 --> s0: rollover
 ```
 
 **Concepts:** Sequential counting, state retention, counter design
@@ -80,7 +86,6 @@ Input stream: `1 → 0 → 1 → 1`
 
 ![Shift Register Waveform](Serial_in_shiftregister/waveform/shift_wave.png)
 
-> Place each screenshot in its corresponding sub-folder's `waveform/` directory and confirm filenames match the paths above.
 
 ---
 
