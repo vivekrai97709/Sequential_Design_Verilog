@@ -23,8 +23,6 @@ Positive-edge triggered, the basic 1-bit storage element underlying every sequen
 
 **Concepts:** Sequential logic, edge triggering, non-blocking assignments
 
-![DFF Waveform](D_flipflop/waveform/dff_wave.png)
-
 ---
 
 ### 2. 4-Bit Register
@@ -36,8 +34,6 @@ Clock ↑
 
 Output = 1010
 **Concepts:** Register design, module instantiation, multi-bit sequential logic
-
-![Register Waveform](4bitregister/waveform/register_wave.png)
 
 ---
 
@@ -63,8 +59,6 @@ stateDiagram-v2
 
 **Concepts:** Sequential counting, state retention, counter design
 
-![Counter Waveform](upcounter4bit/waveform/counter_wave.png)
-
 ---
 
 ### 4. 4-Bit Serial-In Shift Register
@@ -83,9 +77,6 @@ Input stream: `1 → 0 → 1 → 1`
 | 4 | `1011` |
 
 **Concepts:** Bit slicing, concatenation operator, shift operations, register transfer logic
-
-![Shift Register Waveform](Serial_in_shiftregister/waveform/shift_wave.png)
-
 
 ---
 
